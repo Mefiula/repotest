@@ -2,21 +2,18 @@
 
 using namespace std;
 
-void lower(char tekst[])
+void lower(char tekst[i])
 {
 
-    while(tekst!='.')
+    while(tekst[i]!='.')
     {
-      if(tekst>95)
-          cout<<(char)(tekst-32);
+      if(tekst[i]>95)
+          cout<<(char)(tekst[i]-32);
       else
-        cout<<tekst;
-    cin>> tekst;
+        cout<<tekst[i];
     }
 
     cout<<endl;
-
-
 
     }
 
@@ -25,7 +22,6 @@ void lower(char tekst[])
     //sprawdź kod ASCII znaku
     //jeżeli kod odpowiada dużej literze, podmień znak;
 
-}
 
 void szyfruj(char tekst[], int klucz) {
     int i = 0; // indeks
