@@ -1,0 +1,38 @@
+cos tam w base:
+
+TEXT [VARCHAR] - do przechowywania tekstu 
+INTEGER - tekstowy
+FLOAT    jezli mamy pole dane finansowe i sa trakotwane jaki dziesietne to wybierac 
+          tryb DECINAL, a float do matematycznych np wymiary pomiarów lub dane statystyczne
+DECINAL
+DATA
+
+
+ile potrzeba tabel/ - tabela powwina zawierac informacje tylko o jednym obkiekcie
+
+jedno stanowisko np keirowca moze zsotac przypisane wielu pracownikom
+
+typy relacji:
+- jeden do wielu
+
+
+
+pole tabeli któ©ego wartosc nie powtarza sie w obrebie tej tebeli czyli dla 
+kazdego rekordu jest innna jest klcuzem tej tabeli
+
+tabela
+klucz główny
+klucz obcy
+rekord tabeli
+pole tabeli
+relacja 
+
+typ dancyh klucza podstawowego i klucza obcego jest zawswze taki sam
+
+jezli mamy pole dane finansowe i sa trakotwane jaki dziesietne to wybierac 
+tryb DECINAL, a float do matematycznych np wymiary pomiarów lub dane statystyczne
+
+
+format csv- poodzielane czyms tam
+
+w3schools WAŻNE COŚ TAM SKŁADNIA SQL XDDD
