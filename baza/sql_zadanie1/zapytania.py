@@ -21,8 +21,9 @@ def kw_c(cur):
 
 def kw_e(cur):
     cur.execute("""
-        SELECT nazwisko, dzial_nazwa, premia
-        FROM 
+        SELECT nazwisko, stanowisko, premia.premia
+        FROM premia, pracownicy
+        WHERE premia.id = pracownicy.stanowisko
     """)
     
     wyniki = cur.fetchall()
