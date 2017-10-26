@@ -3,8 +3,6 @@
 #
 #  zapytania.py
 #  
-#  
-#  
 
 
 import sqlite3
@@ -39,6 +37,26 @@ def kw_c(cur):
     """)
     wyniki(cur)
     
+def kw_d(cur):
+    cur.execute("""
+        SELECT Imie, Nazwisko, Ocena
+        FROM tbUczniowie, tbOceny
+        WHERE tbOceny.UczenID = tbUczniowie.IDUcznia
+        AND tbUczniowie.Nazwisko = 'Nowak'
+    """)
+    wyniki(cur)
+    
+def kw_e(cur):
+    cur.execute("""
+        SELECT AVG(tbOceny.Ocena)
+        FROM tbOceny, tbPrzedmioty
+        WHERE tbOceny.PrzedmiotID = tbPrzedmioty.IDPrzedmiotu
+        AND tbPrzedmioty.Przedmiot = 'fizyka'
+        AND tbOceny.Datad > '2012-10-01'
+        AND tbOceny.Datad < '2012-10-31'
+    """)
+    wyniki(cur)
+    
     
 def main(args):
     con = sqlite3.connect('szkola.db')
@@ -48,6 +66,8 @@ def main(args):
     kw_a(cur)
     kw_b(cur)
     kw_c(cur)
+    kw_d(cur)
+    kw_e(cur)
     return 0
 
 if __name__ == '__main__':
